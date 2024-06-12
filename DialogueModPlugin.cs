@@ -1,0 +1,33 @@
+﻿using BepInEx;
+using BepInEx.Configuration;
+using FarlandsCoreMod;
+using FarlandsCoreMod.Attributes;
+using FarlandsDialogueMod.Patchers;
+using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace FarlandsDialogueMod
+{
+    [BepInPlugin("top.magincian.farlands_dialogue_mod", PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInDependency("top.magincian.fcm")]
+    public class DialogueModPlugin : FarlandsMod
+    {
+        [Configuration.Bool("Debug","TermDialog", "If true, any dialog will be replaced by its term", false)]
+        public static ConfigEntry<bool> Config_termDialog;
+
+        [Configuration.Bool("Debug", "ExportDialogues", "If true, a export file will be created and will save all the dialogs you will read", false)]
+        public static ConfigEntry<bool> Config_exportDialogues;
+
+        [Configuration.Bool("Config", "DialogEnable", "If true, the custom traduction is the used", false)]
+
+        public static ConfigEntry<bool> Config_dialogEnable;
+
+        public override void OnStart()
+        {
+            // Plugin startup logic
+            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+        }
+    }
+}
