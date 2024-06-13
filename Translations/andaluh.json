@@ -32,6 +32,7 @@
   "General/caja_casa": "¡Â conçegío un kîh de erramientâ y 200 créditô!",
   "General/language": "Idioma",
   "General/menu_principal": "Menú Prinçipâh",
+  "General/ui_bed": "¿Quierê terminâh er día e irte a la cama?",
 
   // HUD
   "General/ui_day": "Día",
@@ -41,6 +42,21 @@
   "General/ui_amount": "Cant", // Cant(idad)
   "General/valor": "Balôh", // Valor
   "General/ui_sales": "Totâh Bentâ:", // Total
+  "General/quieres_viajar": "¿Quierê biahâh a",
+  "General/improve_key": "Mehorâh",
+  "General/Nivel Actual": "Nibêh Âttuâh",
+  "General/improve_cell_name": "Añadîh Célula de Combûttible",
+  "General/improve_engine_name": "Mehorâh er Motôh",
+  "General/improve_load_name": "Aumentâh êppaçio de la Baía de Carga",
+  "General/improve_reactors_name": "Mehorâh Reâttorê",
+  "General/improve_matter_name": "Mehorâh Proçeçadôh de Materia",
+  "General/improve_hull_name": "Refuerço der Câcco",
+  "General/improve_cell_description": "Añade dôh nuebâ çélulâ de combûttible.",
+  "General/improve_engine_description": "Reduçe côttê en lô çartô entre planetâ.",
+  "General/improve_load_description": "Añade 4 êppaçiô a la baía de carga.",
+  "General/improve_reactors_description": "Mehora la beloçidá a la que çe açen lô çartô entre planetâ",
+  "General/improve_matter_description": "Añade o mehora la heneraçión paçiba de combûttible.",
+  "General/improve_hull_description": "Mehora única que permite âççedêh a Darmstá.",
 
   // Inventory Item
   "Inventory/item_name_1": "Axa", // Hacha
@@ -52,11 +68,14 @@
   "Inventory/item_name_4": "Ôh", // Hoz
   "Inventory/item_description_4": "Una bieha ôh de mano, le cuêtta un poco, pero puede cortâh ierbâ y ierbahô.", // Hoz
   "Inventory/item_name_7": "Madera", // Madera
+  "Inventory/item_description_7": "Tiene un peculiâh colôh açulao, çe puede utiliçâh pa côttruîh argunâ coçâ.",
   "Inventory/item_name_8": "Ierba", // Hierva
   "Inventory/item_name_9": "Çabia", // Savia
   "Inventory/item_description_8": "Fibrâ y ierbâ bariâ, creçen por toâ partê, con er bioheneradôh çe puede combertîh en argo de combûttible pa la nabe.", // Hierva
   "Inventory/item_name_10": "Piedra", // Piedra
   "Inventory/item_description_10": "No êh muxo, pero çi hunto çufiçientê podré côttruîh y fabricâh coçâ mâh intereçantê.", // Piedra
+  "Inventory/item_name_11": "Heoda", // Geoda
+  "Inventory/item_description_11": "Êh mu dura por fuera y quiçâh êcconda argo intereçante en çu interiôh, debería yebâl-la a un errero.", // Geoda
   "Inventory/item_name_12": "Carbón", // Carbón
   "Inventory/item_description_12": "Una fuente de combûttible fóçî. Puede ençendêh ônnô o uçarçe de combûttible pa la nabe.", // Carbón
   "Inventory/item_name_14": "Piña", // Piña
@@ -64,6 +83,9 @@
   "Inventory/item_description_15": "Borça de çemiyâ de fruta temporâh, puedo plantâl-la en terreno arao, a bêh çi creçe.",
   "Inventory/item_name_17": "Çemiyâ bariâh", // Semillas
   "Inventory/item_description_17": "Me pregunto qué creçerá çi lâ planto en terreno arao.", // Semillas
+  "Inventory/item_name_18": "Cobre", // Cobre
+  "Inventory/item_description_18": "Êh un guen condûttôh de elêttriçidá, çeguro que me çirbe pa fabricâh coçâ o mehorâh lâ erramientâ.", // Cobre
+  "Inventory/item_name_19": "Plata", // Plata
   "Inventory/item_name_20": "Xatarra", // Chatarra
   "Inventory/item_description_20": "Un puñao de pieçâ metálicâ en mâh êttao, pareçe que perteneçían ar droide de açîttençia perçonâh.",
   "Inventory/item_name_21": "Pieça de recambio",
@@ -72,21 +94,39 @@
   "Inventory/item_description_22": "Una regaera de pláttico bieha, pero çige funçionando perfêttamente.", // Regadera
   "Inventory/item_name_24": "Çemiyâ de Açafrán Bumerang", // Semillas de Azafrán Bumerang
   "Inventory/item_description_24": "Çaco de çemiyâ de açafrán, çe plantan en otoño.", // Semillas de Azafrán Bumerang
+  "Inventory/item_name_26": "Çemiyâ de Limo", // Semillas de Limo
+  "Inventory/item_description_26": "Çaco de çemiyâ de slime, çe pueden plantâh tó el año.", // Semillas de Limo
+  "Inventory/item_name_40": "Crîttalinita", // Cristalinita
+  "Inventory/item_description_40": "Çe forma a artíçimâ temperaturâ, çirbe como materiâh de côttrûççión de nabê", // Cristalinita
+  "Inventory/item_name_41": "Cronio", // Cronio
+  "Inventory/item_description_41": "Çe diçe que te apareçe en la moxila antê de que lo recolêttê. Çi no picâ la mena podría henerâh un aguhero en el êppaçio-tiempo",
+  "Inventory/item_name_42": "Oro", // Oro
+  "Inventory/item_name_43": "Mitrilo", // Mitrilo
+  "Inventory/item_description_43": "Minerâh lehendario que çe utiliça pa côttruîh lâ partê mâh abançâh",
+  "Inventory/item_name_55": "Çelêttio", // Celestio
+  "Inventory/item_description_55": "Uno de lô mineralê mâh comunê der çîttema y mu utiliçao en partê de nabê.", // Celestio
   "Inventory/item_name_56": "Lenguarga", // Lengualga
   "Inventory/item_description_56": "Tiene una larga lengua con la que atrapa peçê mâh pequeñô", // Lengualga
   "Inventory/item_name_127": "Célula de combûttible", // Célula de combustible
   "Inventory/item_description_127": "Una çélula de combûttible entera, ideâh pa recargâh la nabe.", // Célula de combustible
   "Inventory/item_name_129": "Âpperçôh", // Aspersor
   "Inventory/item_name_130": "Baya", // valla
+  "Inventory/item_name_189": "Çemiyâ de Kuriq", // Semillas de Kuriq
+  "Inventory/item_description_189": "Pa plantâh en climâ cálidô, creçe en 10 díâ.",
+  "Inventory/item_name_191": "Semillas de Mollifruta", // Semillas de Moyifruta
+  "Inventory/item_description_191": "Pa plantâh en climâ cálidô, creçe en 10 díâ.", // Semillas de Moyifruta
   "Inventory/item_name_193": "Çemiyâ de bayina", // Semillas de bayina
-  "Inventory/item_name_213": "Çuelo de tablonê", // Suelo de tablones
   "Inventory/item_description_193": "Pa plantâh en climâ cálidô, creçe en 5 díâ.", // Semillas de bayina
   "Inventory/item_name_195": "Çemiyâ de xinola", // Semillas de chinola
   "Inventory/item_description_195": "Pa plantâh en climâ cálidô, creçe en 5 díâ.", // Semillas de chinola
+  "Inventory/item_name_197": "Çemiyâ de Cucuí", // Semillas de Cucuí
+  "Inventory/item_description_197": "Pa plantâh en climâ cálidô, creçe en 10 díâ.",
+  "Inventory/item_name_199": "Çemiyâ de globolabaça", // Semillas de globolabaza
+  "Inventory/item_description_199": "Pa plantâh en climâ cálidô, creçe en 15 díâ.",
   "Inventory/item_name_204": "Çaco de baçura", // Bolsa de basura
   "Inventory/item_description_204": "Una borça de baçura bieha, quién êh er guarro que la tiró al agua.", // Bolsa de basura
-  
   "Inventory/item_name_212": "Valla Galeana", // Valla Galeana
+  "Inventory/item_name_213": "Çuelo de tablonê", // Suelo de tablones
   "Inventory/item_name_215": "Valla Terbinita", // Valla Terbinita
   "Inventory/item_name_216": "Barrîh", // Barril
   "Inventory/item_name_217": "Caha", // caja
@@ -127,6 +167,20 @@
   "General/larry_welcome_3": "Puedê mirâh tó lo que quierâ.",
   "General/larry_welcome_4": "Tómate tu tiempo.",
 
+  // Gorg
+  "General/gorg_welcome_01": "¿Qué neçeçitâ de mi tayêh?",
+  "General/gorg_welcome_02": "¡Ola! Graçiâ por benîh.",
+  "General/gorg_welcome_03": "¡Ola! ¿En qué puedo ayudarte oy?",
+  "General/gorg_welcome_04": "¡Çaludô! ¿Bûccâ argo en particulâh?",
+
+  // Te'kragh
+  "General/te'kragh_welcome_02": "¡Ola! Êpplora y encuentra marabiyâ en mi tayêh",
+  "General/te'kragh_welcome_03": "Aquí, la feliçidá tiene dêccuento.",
+  "General/te'kragh_welcome_04": "¡Ola!",
+
+  //Madhur
+  "General/madhur_welcome1": "¡Ola! ¡Ola!",
+  "General/madhur_thanks1": "¡Muxíçimâ graçiâ!",
 
   //Dialogues
   "Dialogue System/Conversation/Intro Vendedor.Diálogo Vendedor Parte 1/Entry/3/Dialogue Text": "¡Ola! Êppero que ayâ tenío un argadable biahe. Acompáñame, te ençeñaré er lugâh",
@@ -181,7 +235,7 @@
   "Dialogue System/Conversation/Manual.Manual/Entry/8/Dialogue Text": "Êtta demo dura çolamente 10 díâ, durante eçe tiempo puedê açêh lo que quierâ.",
   "Dialogue System/Conversation/Manual.Manual/Entry/9/Dialogue Text": "Te recomiendo biahâh ar planeta Terbin, ayí ay un montón de hente y lugarê de interêh.",
   "Dialogue System/Conversation/Manual.Manual/Entry/10/Dialogue Text": "En la tienda puedê comprâh çemiyâ, y er mecánico puede mehorâh tu nabe.",
-  // ERRONEO "Dialogue System/Conversation/Manual.Manual/Entry/11/Dialogue Text": "En la tienda puedê comprâh çemiyâ, y er mecánico puede meorâh tu nabe.",
+  "Dialogue System/Conversation/Manual.Manual/Entry/11/Dialogue Text": "La caña de pêccâh y la ré pa câtturâh inçêttô lâ puedê conçegîh en Terbin.",
   "Dialogue System/Conversation/Manual.Manual/Entry/12/Dialogue Text": "Y argo e oío çobre \"Êr Arca\", çi no te çuena te aconçeho que bayâ ayí.",
   "Dialogue System/Conversation/Manual.Manual/Entry/13/Dialogue Text": "Çi neçeçitâ mâh informaçión, çerá un plaçêh ayudarte.",
   "Dialogue System/Conversation/Manual.Manual/Entry/30/Dialogue Text": "¡Puê eçe êh mi trabaho!",
@@ -270,6 +324,193 @@
   "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/7/Dialogue Text": "Cá çarto entre planetâ gâttará una çélula de combûttible. En êtte panêh inferiôh te marcará tanto la ora de yegá como er gâtto de çélulâ.",
   "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/8/Dialogue Text": "Cuánto mâh lehô êtté un planeta, mâh combûttible gâttarâh y tiempo neçeçitarâh pa yegâh. ¡Bihila la ora!",
   "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/9/Dialogue Text": "Una bêh ayâ çelêççionao er planeta ar que quierâ biahâh, âççiona la palanca grandota y yo me encargaré del rêtto.",    "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/10/Dialogue Text": "Soy un piloto excepcional, ¡No tienes de qué preocuparte!",
-  "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/11/Dialogue Text": "Êppero…"
+  "Dialogue System/Conversation/Tutorial Interior Nave.Panel de viaje espacial/Entry/11/Dialogue Text": "Êppero…",
     
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/3/Dialogue Text": "¡Tsk! Largaô de una bêh de êtte çîttema, no çoî mâh que una molêttia.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/4/Dialogue Text": "¿Molêttia? Eço que yamâ “molêttia” êttaba aquí muxo antê de que yegaçeî tu empreça y tú.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/5/Dialogue Text": "Conçegiré lo que quiero Oola, çiempre lo ago.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/6/Dialogue Text": "Eço ya lo beremô.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/7/Dialogue Text": "Mientrâ una çola perçona lo aga, çegiré luxando por lô beçinô de Terbin.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/8/Dialogue Text": "Çe te agota er tiempo, ya caçi no te apoya nadie.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 1/Entry/9/Dialogue Text": "Eço no me a çupuêtto un problema en el rêtto de çîttemâ que emô âççorbío.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/3/Dialogue Text": "Çig…",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/4/Dialogue Text": "¡Ôh! Lamento que ayâ tenío que preçençiâh tó êtto.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/5/Dialogue Text": "Tú debê de çêh [var=Player.name], açía muxo que no benía a bibîh nadie a êtte çîttema, açí que lô rumorê an yegao bien rápido.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/6/Dialogue Text": "Yo çoy Oola, el arcarde de êtte açentamiento en Terbin.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/7/Dialogue Text": "Êh un plaçêh bêh a argien hoben intereçao por una comunidá pequeña como êtta.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/8/Dialogue Text": "Aunque por dêggraçia, puede que tu êttançia no çea êppeçiarmente duradera.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/9/Dialogue Text": "Eçe ombre con er que me âh êccuxao dîccutîh êh Gorman, er hefaço de una enorme empreça interêttelâh.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/10/Dialogue Text": "Êtte çîttema êh rico en recurçô, pero como êttá mu lehô de lâ grandê metrópolî, lâ empreçâ pequeñâ lo înnoran.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 2/Entry/11/Dialogue Text": "Çe dedican a la ôttençión y dîttribuçión de materiâ primâ por el uniberço.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 3/Entry/3/Dialogue Text": "La única atençión que logramô dêppertâh êh la de empreçâ como la çuya, que proçeçan lô recurçô a nibêh planetario y no dehan ná a çu paço.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 3/Entry/4/Dialogue Text": "Eçe ombre êttá açiendo tó lo que êttá en çu mano pa que dehemô er çîttema, y açí podêh êttraêh tôh çû recurçô.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 4/Entry/3/Dialogue Text": "Y âtta aora… lo êttá logrando.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 4/Entry/4/Dialogue Text": "Ya çolo quedamô unô pocô beçinô, an lograo combençêh o çobônnâh a la mayoría y êh cuêttión de tiempo que logren açêh lo mîmmo con lô que quedan.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 5/Entry/3/Dialogue Text": "Pero gueno, tampoco querría amargarte la êttançia y todabía no ay ná êccrito, açí que tú no debê preocuparte por ná, ¡Argo çe me ocurrirá!",
+  "Dialogue System/Conversation/Primer evento historia.Parte 5/Entry/4/Dialogue Text": "De momento te animo a que te dê una buerta por el açentamiento y conôccâ a lô localê, berâh que formamô una comunidá de lo mâh bariopinta.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 5/Entry/5/Dialogue Text": "Cuarquiêh coça que neçeçitê de mi, çuelo êttâh en el ayuntamiento.",
+  "Dialogue System/Conversation/Primer evento historia.Parte 5/Entry/6/Dialogue Text": "Êppero berte muxo por aquí.",
+  "Dialogue System/Conversation/Nori.4/Entry/3/Dialogue Text": "¿Te ago unâ tôttaditâ cariño?",
+  "Dialogue System/Conversation/Uma.4/Entry/3/Dialogue Text": "¿Puedo ayudarte, çielo?",
+  "Dialogue System/Conversation/Madhur.Tienda/Entry/4/Dialogue Text": "Comprâh",
+  "Dialogue System/Conversation/Madhur.Tienda/Entry/6/Dialogue Text": "Ablâh",
+  "Dialogue System/Conversation/Madhur.Tienda/Entry/5/Dialogue Text": "Çalîh",
+  "Dialogue System/Conversation/Madhur.3/Entry/5/Dialogue Text": "Er trabaho de tendero puede çêh agotadôh.",
+  "Dialogue System/Conversation/Madhur.3/Entry/3/Dialogue Text": "¡Pero êh mu gratificante!",
+
+  "Dialogue System/Conversation/Story01.Part1/Entry/3/Dialogue Text": "No çé cómo bamô a açêh êtto…",
+  "Dialogue System/Conversation/Story01.Part1/Entry/4/Dialogue Text": "¡Ôh! Ola de nuebo.",
+  "Dialogue System/Conversation/Story01.Part1/Entry/5/Dialogue Text": "Dîccurpa, tó êtto de Gorman a beçê me çupera un poco.",
+  "Dialogue System/Conversation/Story01.Part1/Entry/6/Dialogue Text": "Er tío conçige yebarme ar límite.",
+  "Dialogue System/Conversation/Story01.Part1/Entry/8/Dialogue Text": "¿Bêh eço de aí?",
+  "Dialogue System/Conversation/Story01.Part2/Entry/3/Dialogue Text": "Êh un teletrâpportadôh que conêtta dirêttamente con una nabe yamá \"Êh Arca\".",
+  "Dialogue System/Conversation/Story01.Part2/Entry/4/Dialogue Text": "En eya abita una raça caçi êttinta: Lô Empíreô.",
+  "Dialogue System/Conversation/Story01.Part2/Entry/5/Dialogue Text": "Çe dedican a ayudâh a çîttemâ ar borde der colâçço, como er nuêttro.",
+  "Dialogue System/Conversation/Story01.Part2/Entry/6/Dialogue Text": "Çon fríô y dîttantê, pero açen una guena labôh.",
+  "Dialogue System/Conversation/Story01.Part2/Entry/7/Dialogue Text": "Cuando Gorman començó a âttuâh, baloré la ôççión de pedîl-lê ayuda.",
+  "Dialogue System/Conversation/Story01.Part2/Entry/8/Dialogue Text": "Pero no funçionó…",
+  "Dialogue System/Conversation/Story01.Part2/Entry/9/Dialogue Text": "Çi nuêttro çîttema çe acohieçe a çu programa de protêççión, Gorman no podría ni tocânnô… ¡Êttaríamô çarbáô!",
+  "Dialogue System/Conversation/Story01.Part2/Entry/10/Dialogue Text": "Pero pa açêh eço requieren un êttenço catálogo de tó tipo de flora, fauna, recurçô y artefâttô der çîttema.",
+  "Dialogue System/Conversation/Story01.Part2/Entry/11/Dialogue Text": "Çi no podemô hûttificâh que mereçemô çêh protehíô, no çe lo plantean.",
+  "Dialogue System/Conversation/Story01.Part3/Entry/4/Dialogue Text": "Durante çemanâ ablé con lô beçinô a bêh çi arguno êttaba dîppuêtto a ayudarme.",
+  "Dialogue System/Conversation/Story01.Part3/Entry/5/Dialogue Text": "Pero çiempre çurhe argún problema.",
+  "Dialogue System/Conversation/Story01.Part4/Entry/4/Dialogue Text": "Argunô no tienen lô mediô pa dêpplaçarçe a otrô planetâh…",
+  "Dialogue System/Conversation/Story01.Part5/Entry/4/Dialogue Text": "Otrô êttán demaçiao mayorêh…",
+  "Dialogue System/Conversation/Story01.Part6/Entry/4/Dialogue Text": "Y lô que çí abrían podío çe fueron açe muxo…",
+  "Dialogue System/Conversation/Story01.Part7/Entry/4/Dialogue Text": "Açí que finarmente lo acabé dêccartando y baloré otrâ ôççionê.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/5/Dialogue Text": "Mantengo er teletrâpportadôh en el Ayuntamiento por çi argún beçino deçide animarçe.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/6/Dialogue Text": "No me gûtta tenêh que açêh êtto, pero…",
+  "Dialogue System/Conversation/Story01.Part7/Entry/7/Dialogue Text": "¿Querríâ ayudânnô?",
+  "Dialogue System/Conversation/Story01.Part7/Entry/8/Dialogue Text": "De acuerdo.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/9/Dialogue Text": "No.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/10/Dialogue Text": "Lo entiendo, no te preoc… ¿Cómo?",
+  "Dialogue System/Conversation/Story01.Part7/Entry/11/Dialogue Text": "¿De berdá? Lo diçê en çerio?",
+  "Dialogue System/Conversation/Story01.Part7/Entry/13/Dialogue Text": "No.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/14/Dialogue Text": "¡Qué guena notiçia! Muxíçimâ graçiâ!",
+  "Dialogue System/Conversation/Story01.Part7/Entry/15/Dialogue Text": "¡Erê lo mehôh que le a paçao a êtte çîttema en añô!",
+  "Dialogue System/Conversation/Story01.Part7/Entry/16/Dialogue Text": "¡Êtto ay que çelebrâl-lo!",
+  "Dialogue System/Conversation/Story01.Part7/Entry/17/Dialogue Text": "Ehem.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/18/Dialogue Text": "Perdón",
+  "Dialogue System/Conversation/Story01.Part7/Entry/19/Dialogue Text": "Me cuêtta contenêh la alegría.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/20/Dialogue Text": "Cuando quierâ, çimplemente entra en er teletrâpportadôh.",
+  "Dialogue System/Conversation/Story01.Part7/Entry/22/Dialogue Text": "Lô Empíreô te êpplicarán el rêtto.",
+  
+  "Dialogue System/Conversation/Story02.Part1/Entry/4/Dialogue Text": "Biembenío al Arca, umano.",
+  "Dialogue System/Conversation/Story02.Part1/Entry/5/Dialogue Text": "Er teletrâpportadôh que âh uçao te trae dêdde er çîttema SR755.",
+  "Dialogue System/Conversation/Story02.Part1/Entry/6/Dialogue Text": "Çe conçedió a un Qurbinita en poçiçión de podêh.",
+  "Dialogue System/Conversation/Story02.Part1/Entry/7/Dialogue Text": "¿Le a ocurrío argo ar Qurbinita?",
+  "Dialogue System/Conversation/Story02.Part1/Entry/9/Dialogue Text": "Me mandó él",
+  "Dialogue System/Conversation/Story02.Part1/Entry/8/Dialogue Text": "Le a dao berguença benîh",
+  "Dialogue System/Conversation/Story02.Part1/Entry/10/Dialogue Text": "Aora çoy yo er que êttá en poçiçión de podêh",
+  "Dialogue System/Conversation/Story02.Part1/Entry/11/Dialogue Text": "Comprendo.",
+  "Dialogue System/Conversation/Story02.Part1/Entry/14/Dialogue Text": "Dedûcco entonçê, que êttâh aquí pa îccribîh ar çîttema SR755 en er Proyêtto Arca.",
+  "Dialogue System/Conversation/Story02.Part1/Entry/15/Dialogue Text": "Êh un proçeço çençiyo, pero requiere de la colaboraçión de lô localê, acompáñame.",
+  
+  "Dialogue System/Conversation/Story02.Part2/Entry/4/Dialogue Text": "Êtta çala çe açînnó ar çîttema SR755 cuando er Qurbinita bino por primera bêh.",
+  "Dialogue System/Conversation/Story02.Part2/Entry/5/Dialogue Text": "Êttá diçeñá pa armaçenâh fauna, flora, mineralê y artefâttô îttóricô.",
+  "Dialogue System/Conversation/Story02.Part3/Entry/3/Dialogue Text": "Er propóçito de êtta çala êh balorâh çi lô recurçô y la îttoria de SR755 mereçen çêh preçerbáô en er tiempo.",
+  
+  "Dialogue System/Conversation/Story02.Part3/Entry/4/Dialogue Text": "Çi deçeáî que lô Empíreô acohamô buêttro çîttema, debéî açêh una imberçión económica pa abilitâh lâ diferentê alâ.",
+  "Dialogue System/Conversation/Story02.Part3/Entry/5/Dialogue Text": "Trâ eyo, tendréî que traêh tôh lô recurçô que çeáî capaçê de reunîh.",
+  "Dialogue System/Conversation/Story02.Part3/Entry/6/Dialogue Text": "Çi completáî el 70% de lô requiçitô de la çala, acoheremô ar çîttema SR755 y garantiçaremô çu protêççión durante lô próççimô 10.000 añô.",
+  "Dialogue System/Conversation/Story02.Part3/Entry/7/Dialogue Text": "Toma, âttiba êtte cubo, por fabôh.",
+  
+  "Dialogue System/Conversation/Story02.Part4/Entry/16/Dialogue Text": "Eço êh un cubo de Robeets, nuêttra tênnolohía de çegimiento.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/4/Dialogue Text": "Lô Robeets çe repartirán por tó er çîttema SR755.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/10/Dialogue Text": "Apareçerán ante ti çolamente cuando realiçê âççionê que te mueban en la dirêççión corrêtta.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/5/Dialogue Text": "Ademâh, çe an açînnao dôh Empíreô menorê a êtta çala.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/6/Dialogue Text": "Puedê ablâh con eyô pa açêh un çegimiento de la catalogaçión der çîttema, entregâh ôhhetô y pa dêbbloqueâh lâ çêççionê que conçiderê mâh oportunâ.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/13/Dialogue Text": "Çi lo açê, reçibirâh pequeñâ recompençâ a interbalô regularê.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/12/Dialogue Text": "Çegún nuêttrô datô, eço êh motibaçión çufiçiente pa la mayoría de umanô.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/7/Dialogue Text": "¿Lo âh entendío tó?",
+  "Dialogue System/Conversation/Story02.Part4/Entry/14/Dialogue Text": "Çi",
+  "Dialogue System/Conversation/Story02.Part4/Entry/15/Dialogue Text": "No",
+  "Dialogue System/Conversation/Story02.Part4/Entry/9/Dialogue Text": "Mânnífico.",
+  "Dialogue System/Conversation/Story02.Part4/Entry/8/Dialogue Text": "Te deçeo çuerte en la recolêççión de ôhhetô.",
+
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/3/Dialogue Text": "Biembenío ar muçeo, umano. ¿Que quierê açêh?",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/4/Dialogue Text": "Açêh una donaçión",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/14/Dialogue Text": "¿Donde êttoy?",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/6/Dialogue Text": "Çalîh",
+  "General/Donar": "Donâh",
+  "General/proxima_recompensa": "Próççima Recompença",
+
+  "Dialogue System/Conversation/Empireos.Donación Hecha/Entry/3/Dialogue Text": "Graçiâ por tu donaçión umano.",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/10/Dialogue Text": "Er propóçito de êtta çala êh balorâh çi lô recurçô y la îttoria de SR755 mereçen çêh preçerbáô en er tiempo.",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/11/Dialogue Text": "Çi deçeáî que lô Empíreô acohamô buêttro çîttema, debéî açêh una imberçión económica pa abilitâh lâ diferentê alâ.",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/12/Dialogue Text": "Trâ eyo, tendréî que traêh tôh lô recurçô que çeáî capaçê de reunîh.",
+  "Dialogue System/Conversation/Empireos.Empireo Menor/Entry/13/Dialogue Text": "Çi completáî el 70% de lô requiçitô de la çala, acoheremô ar çîttema SR755 y garantiçaremô çu protêççión durante lô próççimô 10.000 añô.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/6/Dialogue Text": "Ola Hoben, no e podío ebitâh darme cuenta de que Oola êttaba mâh contento que de côttumbre.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/7/Dialogue Text": "Imahino que âh tenío argo que bêh.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/5/Dialogue Text": "Boy a ayudâl-le con er Proyêtto Arca",
+  "Dialogue System/Conversation/Story03.Part1/Entry/4/Dialogue Text": "No çé de qué me abla, çeñora",
+  "Dialogue System/Conversation/Story03.Part1/Entry/8/Dialogue Text": "Qué guena notiçia, hoben.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/11/Dialogue Text": "A mi marío y a mí nô abría encantao ayudâl-le, pero a nuêttra edá êh complicao.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/12/Dialogue Text": "Me duele tó y me canço ençegida, êh orrible.",
+  "Dialogue System/Conversation/Story03.Part1/Entry/13/Dialogue Text": "Pero tengo argo que te ayudará en tu tarea, açércate.",
+  "Dialogue System/Conversation/Story03.Part2/Entry/10/Dialogue Text": "Hmm…",
+  "Dialogue System/Conversation/Story03.Part2/Entry/7/Dialogue Text": "¿Açê eço cá bêh que te dan argo?",
+  "Dialogue System/Conversation/Story03.Part2/Entry/8/Dialogue Text": "Hmm….",
+  "Dialogue System/Conversation/Story03.Part2/Entry/9/Dialogue Text": "Êh mi bieha ré pa atrapâh bixô.",
+  "Dialogue System/Conversation/Story03.Part2/Entry/4/Dialogue Text": "Êtte çîttema êttá yeno de inçêttô de lo mâh peculiarê.",
+  "Dialogue System/Conversation/Story03.Part2/Entry/5/Dialogue Text": "Te irá bien pa îh completando lô requiçitô de eçâ hentê tan êttirâh.",
+  "Dialogue System/Conversation/Story03.Part2/Entry/6/Dialogue Text": "Ten muxo cuidao, por eço.",
+  "Dialogue System/Conversation/Story03.Part3/Entry/3/Dialogue Text": "¡Ôh! Qué cabeça la mía, caçi lo orbío.",
+  "Dialogue System/Conversation/Story03.Part3/Entry/4/Dialogue Text": "Acompáñame, ¿Quierê?.",
+  "Dialogue System/Conversation/Story03.Part4/Entry/4/Dialogue Text": "¡Amadeû! Deha eço un momento quierê.",
+  "Dialogue System/Conversation/Story03.Part5/Entry/13/Dialogue Text": "He He He He",
+  "Dialogue System/Conversation/Story03.Part5/Entry/10/Dialogue Text": "¿Qué e exo aora aguela?\n<think>Çiempre me êttá riñendo la çeñora êtta</think>",
+  "Dialogue System/Conversation/Story03.Part5/Entry/11/Dialogue Text": "¡AMADEÛ!",
+  "Dialogue System/Conversation/Story03.Part5/Entry/12/Dialogue Text": "¡Perdón! Dime aguela.",
+  "Dialogue System/Conversation/Story03.Part5/Entry/4/Dialogue Text": "¿Todabía guardâ la bieha caña de pêccâh, berdá?",
+  "Dialogue System/Conversation/Story03.Part5/Entry/5/Dialogue Text": "Por çupuêtto, nunca çe çabe cuando puede atacânnô un tiburón boladôh.",
+  "Dialogue System/Conversation/Story03.Part5/Entry/6/Dialogue Text": "Bibimô en un planeta çeco Amadeû.",
+  "Dialogue System/Conversation/Story03.Part5/Entry/7/Dialogue Text": "¡Puê un guçano de arena! He He He",
+  "Dialogue System/Conversation/Story03.Part5/Entry/8/Dialogue Text": "¡AMADEÛ!",
+  "Dialogue System/Conversation/Story03.Part5/Entry/9/Dialogue Text": "¡Aora mîmmo la traigo, aguela!",
+  "Dialogue System/Conversation/Story03.Part6/Entry/4/Dialogue Text": "Êtte ombre me trae loca…",
+  "Dialogue System/Conversation/Story03.Part6/Entry/5/Dialogue Text": "¡50 añô yebamô caçáô!",
+  "Dialogue System/Conversation/Story03.Part6/Entry/6/Dialogue Text": "Y çige con lâ mîmmâ tonteríâ que cuando le conoçí.",
+  "Dialogue System/Conversation/Story03.Part7/Entry/4/Dialogue Text": "Aquí la tienê.",
+  "Dialogue System/Conversation/Story03.Part8/Entry/5/Dialogue Text": "¡Qué baile mâh xulo!",
+  "Dialogue System/Conversation/Story03.Part8/Entry/4/Dialogue Text": "A bêh, debuérbemela un momento.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/13/Dialogue Text": "¡Ai! Mi êpparda… qué dolôh.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/12/Dialogue Text": "Te êttá bien empleao, ya no erê un xabâh.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/11/Dialogue Text": "Con êtta caña podrâh pêccâh peçê, a Amadeû çe le daba mu bien cuando era hóben.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/10/Dialogue Text": "Cuando beâ una çombra en el agua, tírale el ançuelo y a la que pique.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/9/Dialogue Text": "¡ÇÂ!",
+  "Dialogue System/Conversation/Story03.Part9/Entry/8/Dialogue Text": "Çolamente tienê que purçâh er botón der laterâh, êh una caña automática.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/7/Dialogue Text": "Êppero que êttâ erramientâ te ayuden en tû coçâ der Proyêtto Arca.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/6/Dialogue Text": "Aora, çi no te importa, me boy a ponêl-le un poco de crema en la êpparda a mi marío.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/5/Dialogue Text": "He He He. En er fondo me quierê, aguela.",
+  "Dialogue System/Conversation/Story03.Part9/Entry/4/Dialogue Text": "Tira anda.",
+  "Dialogue System/Conversation/Diálogos demo.Demo Gorg/Entry/3/Dialogue Text": "Ola.",
+  "Dialogue System/Conversation/Diálogos demo.Demo Gorg/Entry/4/Dialogue Text": "Eçâ erramientâ eran de An.",
+  "Dialogue System/Conversation/Diálogos demo.Demo Gorg/Entry/5/Dialogue Text": "Le gûttaba lo cláçico.",
+  "Dialogue System/Conversation/Diálogos demo.Demo Gorg/Entry/9/Dialogue Text": "Comprâh",
+  "Dialogue System/Conversation/Diálogos demo.Demo Gorg/Entry/10/Dialogue Text": "Çalîh",
+
+  "Dialogue System/Conversation/Zoe.2/Entry/3/Dialogue Text": "Çi neçeçitâ erramientâ pa tu granha, abla con mi padre, êh er granduyón que êttá hunto ar yunque.",
+  "Dialogue System/Conversation/Zoe.2/Entry/4/Dialogue Text": "Puede intimidâh un poco, pero no aría daño ni a una môcca.",
+  "Dialogue System/Conversation/Iriel.1/Entry/3/Dialogue Text": "Ola cariño, ¿te çirbo argo?",
+  "Dialogue System/Conversation/Siona.1/Entry/3/Dialogue Text": "Ola..",
+  "Dialogue System/Conversation/Siona.1/Entry/4/Dialogue Text": "Çoy Çiona, encantá de conoçerte.",
+  "Dialogue System/Conversation/Droide.3/Entry/3/Dialogue Text": "Ê T T E R M I N Â H",
+  "Dialogue System/Conversation/Droide.3/Entry/5/Dialogue Text": ".",
+  "Dialogue System/Conversation/Droide.3/Entry/6/Dialogue Text": "..",
+  "Dialogue System/Conversation/Droide.3/Entry/7/Dialogue Text": "...",
+  "Dialogue System/Conversation/Droide.3/Entry/8/Dialogue Text": "¿Te gûtta mi imitaçión de robôh açeçino?",
+  "Dialogue System/Conversation/William.3/Entry/3/Dialogue Text": "E...",
+  "Dialogue System/Conversation/William.3/Entry/4/Dialogue Text": "¡Encantao!",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Vendedor/Entry/3/Dialogue Text": "Probablemente neçeçitê un cambio de açeite",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Vendedor/Entry/4/Dialogue Text": "Comprâh",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Vendedor/Entry/5/Dialogue Text": "Mehorâh Nabe",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Vendedor/Entry/6/Dialogue Text": "Ablâh",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Vendedor/Entry/7/Dialogue Text": "Çalîh",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/3/Dialogue Text": "¡Ôh! Un cliente!",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/4/Dialogue Text": "Baya preçioçidá de nabe tienê aí",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/5/Dialogue Text": "Aora me piyâ liao, pero a la que tenga un rato te ago una rebiçión.",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/6/Dialogue Text": "Çeguro que le açe farta un cambio de açeite.",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/7/Dialogue Text": "Y dêdde aquí puedo bêh que no tiene demaçiao bien la hunta de trócola.",
+  "Dialogue System/Conversation/Tienda Mejoras Nave.Demo Te'Kragh/Entry/8/Dialogue Text": "Luego te ago preçupuêtto, no puedê îh en eça tartana, neçeçita un poco de cariño, primero."
 }
