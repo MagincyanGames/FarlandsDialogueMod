@@ -23,4 +23,15 @@ Para esta instalación utilizaremos la versión FarlandsDialogueMod.zip
 5. Al la demo de Farlands el mod ya estará instalado.
 6. Para aplicar el lenguaje personalizado debeis cambiar el idioma a CUSTOM.
 
+## Idiomas Personalizados
+
+### Instalación de una traducción
+
+1. Instalar el mod.
+2. Obtener el archivo *.json* de la traducción que querais.
+3. Ir a la carpeta *BepInEx/plugin/FarlandsDialogueMod*, si no existe creadla.
+4. Poner en dicha carpeta el archivo *.json*.
+5. Iniciar el juego.
+6. Ir al menú de opciones y poner la traducción deseada
+    
 *Proyecto y documentación en desarrollo*
