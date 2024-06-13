@@ -1,4 +1,5 @@
 {
+  "Mod/Translation": "Andaluh",
   "Mod/Inherit": "Spanish",
   "Mod/Tag/<think>(.*?)</think>": "<i><color=\"grey\">$1</color></i>",
   "Mod/Tag/<larrybarry:1>(.*?)</larrybarry:1>": "<color=#901dd2>$1</color>",
