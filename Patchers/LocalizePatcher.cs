@@ -1,5 +1,4 @@
 using BepInEx;
-using FarlandsCoreMod.Patchers;
 using FarlandsCoreMod.Attributes;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -9,11 +8,8 @@ using HarmonyLib;
 using I2.Loc;
 using System;
 using UnityEngine.UI;
-using TMPro;
 using System.Linq;
-using UnityEngine.UIElements.UIR;
 using System.Text.RegularExpressions;
-using static UnityEngine.RemoteConfigSettingsHelper;
 
 namespace FarlandsDialogueMod.Patchers
 {
@@ -42,6 +38,9 @@ namespace FarlandsDialogueMod.Patchers
             Directory.GetFiles(Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/"),
                 "*.json",
                 SearchOption.TopDirectoryOnly).ToList().ForEach(LoadDialoguesFrom);
+
+
+            DialogueModPlugin.Config_dialogIndex.Value = Math.Min(DialogueModPlugin.Config_dialogIndex.Value, Translations.Count - 1);
             LoadTranslation();
         }
 
@@ -51,12 +50,22 @@ namespace FarlandsDialogueMod.Patchers
 
             if (File.Exists(path))
             {
-                string jsonString = File.ReadAllText(path);
+                try
+                {
+                    string jsonString = File.ReadAllText(path);
 
-                Dialogues = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
-                Translations.Add(Dialogues["Mod/Translation"], path);
-                TranslationsList.Add(Dialogues["Mod/Translation"]);
-                
+                    Dialogues = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+
+                    if (!Dialogues.ContainsKey("Mod/Translation")) return;
+
+                    Translations.Add(Dialogues["Mod/Translation"], path);
+                    TranslationsList.Add(Dialogues["Mod/Translation"]);
+                }
+                catch (JsonReaderException err)
+                { 
+                    Debug.Log(err.Message);
+                    return;
+                }
             }
             else
             {
