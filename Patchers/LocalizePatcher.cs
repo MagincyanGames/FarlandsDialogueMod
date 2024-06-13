@@ -13,6 +13,7 @@ using TMPro;
 using System.Linq;
 using UnityEngine.UIElements.UIR;
 using System.Text.RegularExpressions;
+using static UnityEngine.RemoteConfigSettingsHelper;
 
 namespace FarlandsDialogueMod.Patchers
 {
@@ -22,6 +23,8 @@ namespace FarlandsDialogueMod.Patchers
         public static Dictionary<string, string> ReadedDialogues = new();
         public static Dictionary<string, string> Dialogues = new();
         public static Dictionary<string, string> Tags = new();
+        public static Dictionary<string, string> Translations = new();
+        public static List<string> TranslationsList = new();
 
         public static string ApplyTags(string input)
         {
@@ -34,14 +37,43 @@ namespace FarlandsDialogueMod.Patchers
         }
 
         [PatcherPreload]
-        public static void LoadDialogues()
+        public static void Preload()
+        { 
+            Directory.GetFiles(Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/"),
+                "*.json",
+                SearchOption.TopDirectoryOnly).ToList().ForEach(LoadDialoguesFrom);
+            LoadTranslation();
+        }
+
+        public static void LoadDialoguesFrom(string path)
         {
             Debug.Log("Preloading");
-            string path = Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/dialogues.json");
 
             if (File.Exists(path))
             {
                 string jsonString = File.ReadAllText(path);
+
+                Dialogues = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
+                Translations.Add(Dialogues["Mod/Translation"], path);
+                TranslationsList.Add(Dialogues["Mod/Translation"]);
+                
+            }
+            else
+            {
+                Debug.LogError($"No exist \"{path}\"");
+            }
+        }
+        public static void LoadTranslation() => LoadTranslation(TranslationsList[DialogueModPlugin.Config_dialogIndex.Value]);
+        public static void LoadTranslation(string translation)
+        {
+            Debug.Log("Loadding "+translation);
+            string path = Translations[translation];
+
+            if (File.Exists(path))
+            {
+                string jsonString = File.ReadAllText(path);
+
+                Tags.Clear();
 
                 Dialogues = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonString);
                 Dialogues.Where(d => d.Key.StartsWith("Mod/Tag/"))
@@ -49,7 +81,7 @@ namespace FarlandsDialogueMod.Patchers
                     .ForEach(x =>
                     {
                         Debug.Log(x.Key);
-                        if(!Tags.ContainsKey(x.Key)) Tags.Add(x.Key.Replace("Mod/Tag/", ""), x.Value);
+                        if (!Tags.ContainsKey(x.Key)) Tags.Add(x.Key.Replace("Mod/Tag/", ""), x.Value);
                     });
                 if (Dialogues == null) Debug.LogError("EFE");
             }
@@ -58,7 +90,6 @@ namespace FarlandsDialogueMod.Patchers
                 Debug.LogError($"No exist \"{path}\"");
             }
         }
-
         /*[HarmonyPatch(typeof(Localize), "OnLocalize")]
         [HarmonyPostfix]
         public static void OnLocalize(Localize __instance)

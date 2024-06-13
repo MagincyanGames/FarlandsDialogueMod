@@ -24,8 +24,12 @@ namespace FarlandsDialogueMod.Patchers
         {
             var dr = __instance.GetComponent<TMP_Dropdown>();
 
-            int value = LocalizationManager.GetAllLanguages().IndexOf(LocalizationManager.CurrentLanguage) + 1;
-            if (DialogueModPlugin.Config_dialogEnable.Value) dr.value = 0;
+            int value = LocalizationManager.GetAllLanguages().IndexOf(LocalizationManager.CurrentLanguage) + LocalizePatcher.TranslationsList.Count;
+            if (DialogueModPlugin.Config_dialogEnable.Value)
+            {
+                dr.value = DialogueModPlugin.Config_dialogIndex.Value;
+
+            }// TODO Cambiar como se guarda
             else dr.value = value;
         }
 
@@ -36,7 +40,7 @@ namespace FarlandsDialogueMod.Patchers
 
             var dr = __instance.GetComponent<TMP_Dropdown>();
             dr.ClearOptions();
-            dr.AddOptions(["Custom"]);
+            dr.AddOptions(LocalizePatcher.TranslationsList);
 
             dr.AddOptions(LocalizationManager.GetAllLanguages(true));
 
@@ -48,7 +52,7 @@ namespace FarlandsDialogueMod.Patchers
         [HarmonyPrefix]
         public static bool ChangeLanguage(LanguageSelectionScript __instance, int index)
         {
-            index--;
+            index -= LocalizePatcher.TranslationsList.Count;
             Debug.Log(index);
 
             DialogueModPlugin.Config_dialogEnable.Value = index < 0;
@@ -60,6 +64,14 @@ namespace FarlandsDialogueMod.Patchers
             else 
             {
                 var inherit = "English";
+
+                var i = index + LocalizePatcher.TranslationsList.Count;
+                Debug.Log("Traduction index: "+i);
+
+                DialogueModPlugin.Config_dialogIndex.Value = i;
+                
+                LocalizePatcher.LoadTranslation();
+
                 if (LocalizePatcher.Dialogues.ContainsKey("Mod/Inherit") && all.Contains(LocalizePatcher.Dialogues["Mod/Inherit"]))
                     inherit = LocalizePatcher.Dialogues["Mod/Inherit"];
 
