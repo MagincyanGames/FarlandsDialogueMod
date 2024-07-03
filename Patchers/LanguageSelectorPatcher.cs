@@ -17,7 +17,7 @@ namespace FarlandsDialogueMod.Patchers
 {
     [Patcher]
     public class LanguageSelectorPatcher
-    {
+    {/*
         [HarmonyPatch(typeof(LanguageSelectionScript), "Start")]
         [HarmonyPostfix]
         public static void Start(LanguageSelectionScript __instance)
@@ -88,5 +88,5 @@ namespace FarlandsDialogueMod.Patchers
             return false;
 
         }
-    }
+    */}
 }

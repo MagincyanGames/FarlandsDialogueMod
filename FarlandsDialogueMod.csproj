@@ -7,6 +7,7 @@
     <Version>0.0.3</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
+    <DebugType>Full</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,9 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="FarlandsCoreMod">
       <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\FarlandsCoreMod.dll</HintPath>

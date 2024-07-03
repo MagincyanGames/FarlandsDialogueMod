@@ -15,7 +15,7 @@ namespace FarlandsDialogueMod.Patchers
 {
     [Patcher]
     public class LocalizePatcher
-    {
+    {/*
         public static Dictionary<string, string> ReadedDialogues = new();
         public static Dictionary<string, string> Dialogues = new();
         public static Dictionary<string, string> Tags = new();
@@ -99,40 +99,7 @@ namespace FarlandsDialogueMod.Patchers
                 Debug.LogError($"No exist \"{path}\"");
             }
         }
-        /*[HarmonyPatch(typeof(Localize), "OnLocalize")]
-        [HarmonyPostfix]
-        public static void OnLocalize(Localize __instance)
-        {
-            if (__instance == null) Debug.Log("Null instance");
-            Debug.Log("Localizating: "+__instance.Term);
-
-            var located = Localize(__instance.Term);
-            Debug.Log("Located: " + located);
-
-            if (located != null) 
-            {
-                var textComponent = __instance.GetComponent<Text>();
-                if (textComponent != null)
-                {
-
-                    textComponent.text = located;
-
-                    if (DialogueModPlugin.Debug_TermDialog)
-                        AdjustFontSize(textComponent, 100);
-
-                    
-                }
-                else
-                { 
-                    var tmp = __instance.GetComponent<TextMeshProUGUI>();
-                    tmp.text = located;
-
-                    if (DialogueModPlugin.Debug_TermDialog)
-                        tmp.enableAutoSizing = true;
-                }
-                
-            }
-        }*/
+       
         [HarmonyPatch(typeof(LocalizationManager), "GetTranslation")]
         [HarmonyPrefix]
         public static bool Localize(
@@ -199,5 +166,17 @@ namespace FarlandsDialogueMod.Patchers
             fontSize-=1;
             textComponent.fontSize = fontSize;
         }
+
+        [HarmonyPatch(typeof(LocalizationManager), "UpdateSources")]
+        [HarmonyPrefix]
+        public static void PrefixPatch()
+        {
+            LanguageSourceData lsd = new LanguageSourceData()
+            {
+
+            };
+
+            LocalizationManager.Sources.Add(lsd);
+        }*/
     }
 }
