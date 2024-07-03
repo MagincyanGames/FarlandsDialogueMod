@@ -8,6 +8,7 @@ using JetBrains.Annotations;
 using System.Linq;
 using System.IO;
 using BepInEx;
+using System.Diagnostics;
 
 namespace FarlandsDialogueMod.Patchers
 {
@@ -18,12 +19,6 @@ namespace FarlandsDialogueMod.Patchers
         [HarmonyPostfix]
         public static void PrefixPatch()
         {
-            var all = LocalizationManager.Sources;
-            string path = Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/source.json.source");
-            var json = File.ReadAllText(path);
-
-            var source = Newtonsoft.Json.JsonConvert.DeserializeObject<SourceJSON>(json);
-
             if (DialogueModPlugin.Config_exportDialogues.Value)
                 File.WriteAllText(
                     Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/export.json"),
@@ -32,7 +27,18 @@ namespace FarlandsDialogueMod.Patchers
                     )
                 );
 
-            source.LoadInMain();
+            var main = DialogueModPlugin.Instance.GetFiles("", "*.source.json", SearchOption.TopDirectoryOnly)
+                .Select(LoadOneFromPath).ToList().First();
+
+            main.UpdateDictionary(true);
+        }
+
+        private static LanguageSourceData LoadOneFromPath(string path)
+        {
+            var source = SourceJSON.FromFile(path);
+            var main = source.LoadInMain();
+
+            return main;
         }
     }
 }

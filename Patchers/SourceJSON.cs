@@ -60,7 +60,10 @@ namespace FarlandsDialogueMod.Patchers
         {
             terms = new() { Export = data.mDictionary}
         };
-
+        public static SourceJSON FromJson(string json) =>
+            Newtonsoft.Json.JsonConvert.DeserializeObject<SourceJSON>(json);
+        public static SourceJSON FromFile(string path) =>
+            FromJson(DialogueModPlugin.Instance.Read(path));
 
         private void AddContainingTerm(string key, string value, LanguageSourceData data)
         {
@@ -80,8 +83,8 @@ namespace FarlandsDialogueMod.Patchers
             }
         }
 
-        public void LoadInMain() => LoadIn(LocalizationManager.Sources.First());
-        public void LoadIn(LanguageSourceData data) 
+        public LanguageSourceData LoadInMain() => LoadIn(LocalizationManager.Sources.First());
+        public LanguageSourceData LoadIn(LanguageSourceData data) 
         {
             Debug.Log("RECARGANDO DATA");
             data.AddLanguage(name, code);
@@ -168,7 +171,7 @@ namespace FarlandsDialogueMod.Patchers
                 }
             }
 
-            data.UpdateDictionary(true);
+            return data;
         }
         public string ToJson() => Newtonsoft.Json.JsonConvert.SerializeObject(this);
     }

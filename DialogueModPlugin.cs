@@ -29,7 +29,7 @@ namespace FarlandsDialogueMod
         [Configuration.Bool("Debug", "ExportDialogues", "If true, a export file will be created and will save all the dialogues", false)]
         public static ConfigEntry<bool> Config_exportDialogues;
 
-        public DialogueModPlugin Instance;
+        public static DialogueModPlugin Instance;
 
         public override void OnStart()
         {
