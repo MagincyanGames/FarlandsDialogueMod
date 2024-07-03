@@ -26,9 +26,10 @@ namespace FarlandsDialogueMod.Patchers
                         SourceJSON.FromLSD(LocalizationManager.Sources.First())
                     )
                 );
-
-            var main = DialogueModPlugin.Instance.GetFiles("", "*.source.json", SearchOption.TopDirectoryOnly)
-                .Select(LoadOneFromPath).ToList().First();
+            var sources = DialogueModPlugin.Instance.GetFiles("", "*.source.json", SearchOption.TopDirectoryOnly);
+            if (sources.Count() < 1) return;
+            
+            var main =  sources.Select(LoadOneFromPath).ToList().First();
 
             main.UpdateDictionary(true);
         }
