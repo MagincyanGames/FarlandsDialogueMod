@@ -14,7 +14,7 @@ using System.IO;
 namespace FarlandsDialogueMod
 {
     [BepInPlugin("top.magincian.farlands_dialogue_mod", PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-    [BepInDependency("top.magincian.fcm","~0.0.2")]
+    [BepInDependency("top.magincian.fcm","~0.0.3")]
     public class DialogueModPlugin : FarlandsMod
     {
         [Configuration.Bool("Config", "DialogEnable", "If true, the custom traduction is the used", false)]
@@ -29,9 +29,11 @@ namespace FarlandsDialogueMod
         [Configuration.Bool("Debug", "ExportDialogues", "If true, a export file will be created and will save all the dialogues", false)]
         public static ConfigEntry<bool> Config_exportDialogues;
 
+        public DialogueModPlugin Instance;
 
         public override void OnStart()
         {
+            Instance = this;
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
