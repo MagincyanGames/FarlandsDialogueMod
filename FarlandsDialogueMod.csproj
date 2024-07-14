@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>FarlandsDialogueMod</AssemblyName>
     <Description>Mod to change dialogues</Description>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <DebugType>Full</DebugType>
@@ -23,7 +23,7 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\Desktop\Farlands Demo\Farlands Demo_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\Assembly-CSharp-firstpass.dll</HintPath>
@@ -32,13 +32,13 @@
       <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\FarlandsCoreMod.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\Desktop\Farlands Demo\Farlands Demo_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>..\..\..\..\Desktop\Farlands Demo\Farlands Demo_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\Desktop\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>

@@ -9,37 +9,43 @@ using System.Linq;
 using System.IO;
 using BepInEx;
 using System.Diagnostics;
+using PixelCrushers.DialogueSystem;
 
 namespace FarlandsDialogueMod.Patchers
 {
     [Patcher]
-    public class UpdateSourcesPatcher
+    public static class UpdateSourcesPatcher
     {
+        public static bool isLoaded = false;
         [HarmonyPatch(typeof(LocalizationManager), "RegisterSourceInResources")]
         [HarmonyPostfix]
         public static void PrefixPatch()
         {
+            if (isLoaded) return;
+            isLoaded = true;
+
             if (DialogueModPlugin.Config_exportDialogues.Value)
                 File.WriteAllText(
                     Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/export.json"),
                     Newtonsoft.Json.JsonConvert.SerializeObject(
-                        SourceJSON.FromLSD(LocalizationManager.Sources.First())
+                        SourceJSON.FromFull(LocalizationManager.Sources.First(),
+                            DialogueManager.instance.masterDatabase)
                     )
                 );
+
             var sources = DialogueModPlugin.Instance.GetFiles("", "*.source.json", SearchOption.TopDirectoryOnly);
             if (sources.Count() < 1) return;
-            
-            var main =  sources.Select(LoadOneFromPath).ToList().First();
 
-            main.UpdateDictionary(true);
+            var allSources = sources.Select(SourceJSON.FromFile).ToList();
+
+            var mainSource = allSources.Select(LoadOneSource).ToList().First();
+            var data = allSources.Select(LoadOneData).ToList();
+
+            mainSource.UpdateDictionary(true);
+
         }
 
-        private static LanguageSourceData LoadOneFromPath(string path)
-        {
-            var source = SourceJSON.FromFile(path);
-            var main = source.LoadInMain();
-
-            return main;
-        }
+        private static LanguageSourceData LoadOneSource(SourceJSON source) => source.LoadInMain();
+        private static DialogueDatabase LoadOneData(SourceJSON source) => source.LoadInData();
     }
 }
