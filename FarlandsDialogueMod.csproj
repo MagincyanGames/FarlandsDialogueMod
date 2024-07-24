@@ -23,31 +23,31 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="FarlandsCoreMod">
       <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\FarlandsCoreMod.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsNativeModule">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands Demo\Farlands Demo_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

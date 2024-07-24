@@ -287,87 +287,88 @@ namespace FarlandsDialogueMod.Patchers
             rest = str.Substring(i+1);
             return str.Substring(0,i);
         }
-        public static SourceJSON FromFull(LanguageSourceData data, DialogueDatabase database)
+        public static void FromSource(LanguageSourceData source, SourceJSON res)
         {
-            var source = new SourceJSON();
-            
-            var create = source.create;
+            foreach (var term in source.mDictionary)
+            {
+                Debug.Log(term.Key);
+                var VALUE = TermJSON.From(term.Value);
 
+                string op = splitInFirst(term.Key, "/", out var key);
+
+                if (key == "") continue;
+
+                if (op == "General") res.create.General.Add(key, VALUE);
+                else if (op == "Inventory")
+                {
+                    string[] stroke = key.Split("_");
+                    string obj = stroke[2];
+                    string field = stroke[1];
+
+                    if (!res.create.Inventory.ContainsKey(obj))
+                        res.create.Inventory.Add(obj, new());
+
+                    if (field == "name")
+                        res.create.Inventory[obj].name = VALUE;
+                    else if (field == "description")
+                        res.create.Inventory[obj].description = VALUE;
+                }
+                else if (op == "Dialogue System")
+                {
+                    string section = splitInFirst(key, "/", out key);
+
+                    if (section == "Actor")
+                    {
+                        //TODO
+                    }
+                    else if (section == "Variable")
+                    {
+                        //TODO
+                    }
+                    else if (section == "Conversation")
+                    {
+                        Debug.Log("DIALOG");
+
+                        section = splitInFirst(key, "/", out key);
+                        section = section.Replace(".", "/");
+
+                        if (!res.create.Dialogues.Conversations.ContainsKey(section))
+                            res.create.Dialogues.Conversations.Add(section, new() { Entries = new() });
+
+                        var conversation = res.create.Dialogues.Conversations[section];
+                        section = splitInFirst(key, "/", out key);
+                        section = splitInFirst(key, "/", out key);
+
+                        var i = int.Parse(section);
+
+                        for (int j = conversation.Entries.Count; j <= i; j++)
+                            conversation.Entries.Add(new());
+
+                        conversation.Entries[i] = VALUE.Entry;
+                    }
+
+                }
+            }
+        }
+
+        public static void FromDialogue(DialogueDatabase database, SourceJSON res)
+        {
+            foreach (var conversation in CreateCache(database.conversations))
+                res.create.Dialogues.Conversations[conversation.Key].From(conversation.Value);
+        }
+        public static SourceJSON FromFull(LanguageSourceData source, DialogueDatabase database)
+        {
+            var res = new SourceJSON();
             try
             {
-                foreach (var term in data.mDictionary)
-                {
-                    Debug.Log(term.Key);
-                    var VALUE = TermJSON.From(term.Value);
-
-                    string op = splitInFirst(term.Key, "/", out var key);
-
-                    if (key == "") continue;
-
-                    if (op == "General") create.General.Add(key, VALUE);
-                    else if (op == "Inventory")
-                    {
-                        string[] stroke = key.Split("_");
-                        string obj = stroke[2];
-                        string field = stroke[1];
-
-                        if (!create.Inventory.ContainsKey(obj))
-                            create.Inventory.Add(obj, new());
-
-                        if (field == "name")
-                            create.Inventory[obj].name = VALUE;
-                        else if (field == "description")
-                            create.Inventory[obj].description = VALUE;
-                    }
-                    else if (op == "Dialogue System")
-                    {
-                        string section = splitInFirst(key, "/", out key);
-
-                        if (section == "Actor")
-                        {
-                            //TODO
-                        }
-                        else if (section == "Variable")
-                        {
-                            //TODO
-                        }
-                        else if (section == "Conversation")
-                        {
-                            Debug.Log("DIALOG");
-
-                            section = splitInFirst(key, "/", out key);
-                            section = section.Replace(".", "/");
-
-                            if (!create.Dialogues.Conversations.ContainsKey(section))
-                                create.Dialogues.Conversations.Add(section, new() { Entries = new() });
-
-                            var conversation = create.Dialogues.Conversations[section];
-                            section = splitInFirst(key, "/", out key);
-                            section = splitInFirst(key, "/", out key);
-
-                            var i = int.Parse(section);
-
-                            for (int j = conversation.Entries.Count; j <= i; j++)
-                                conversation.Entries.Add(new());
-
-                            conversation.Entries[i] = VALUE.Entry;
-                        }
-
-                    }
-                }
-
-                foreach (var conversation in CreateCache(database.conversations))
-                {
-
-                    Debug.Log($"TODO: {conversation.Key}");
-                    create.Dialogues.Conversations[conversation.Key].From(conversation.Value);
-                }
+                FromSource(source, res);
+                FromDialogue(database, res);
             }
             catch
             {
-                Debug.Log("ERROR");
+                Debug.LogError("Error loadding custom dialogue");
             }
-            return source;
+            return res;
         }
         private static Dictionary<string, T> CreateCache<T>(List<T> assets) where T : Asset
         {
