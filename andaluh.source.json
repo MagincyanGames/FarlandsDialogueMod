@@ -1,0 +1,46 @@
+{
+    "Name": "Andaluh",
+    "Code": "and-es",
+    "translations": {
+        "General": {
+            "CAJA": "Caha",
+            "Confirmar": "Confirmâh",
+            "Despegar": "Dêppegâh",
+            "Donar": "Donâh",
+            "Dormir": "Dormîh",
+            "FABRICAR": "FABRICÂH",
+            "Farm Name": "Nombre de la Granha",
+            "INVENTARIO": "IMBENTARIO",
+            "NUEVA PARTIDA": "NUEBA PARTIDA",
+            "Nivel Actual": "Nibêh Âttuâh",
+            "Procesar": "Proçeçar",
+            "Stop the system from being destroyed!": "¡Ebita que er çîttema çea dêttruío!",
+            "Your Name": "Nombre der propietario",
+            "already_here": "Ya te encuentrâ en êtte planeta",
+            "atras": "atrâh",
+            "bohr_description": "Una luna apenâ êpplorá, la çuperfiçie êttá cubierta de unô ongô que no apareçen en ningún otro lugâh del uniberço. Lô êccánerê muêttran un intrincao çîttema de cabênnâ en el interiôh.",
+            "buy_1": "¡Graçiâ por tu compra! Recuerda que no açêttamô deboluçionê.",
+            "buy_2": "¡Graçiâ! Una guena elêççión...",
+            "buy_3": "¡Muxâ graçiâ! Çeguro que çerá mu útî.",
+            "buy_4": "¡Graçiâ! ¡No te arrepentirâh!",
+            "caja_casa": "¡Â conçegío un kîh de erramientâ y 200 créditô!",
+            "character_confirmation": "¿Êttâh çeguro de que quierê çelêççionâh êtte perçonahe?",
+            "confirm_message": "¿Quierê realiçâh êtta mehora?",
+            "contract_sign": "Firma",
+            "contract_signConfirm": "¿Quierê firmâh er contrato?"
+        },
+        "Inventory":{
+            "1": {
+                "name":"Axa",
+                "description": "Un axa bieha, caçi a perdío tó er filo, aunque aun puede cortâh argunô árbolê no mu durô."
+            }
+        },
+        "Dialogues": {
+            "Conversations": {
+                "Manual.Manual/3": "Ola [var=Player.name]. ¿En qué puedo ayudarte?",
+                "Manual.Manual/4": "No çé qué açêh."
+            }
+
+        }
+    }
+}
