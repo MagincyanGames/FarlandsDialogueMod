@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>FarlandsDialogueMod</AssemblyName>
     <Description>Mod to change dialogues</Description>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <DebugType>Full</DebugType>
@@ -22,14 +22,14 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Reference Include="FarlandsCoreMod">
+      <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\FarlandsCoreMod.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="FarlandsCoreMod">
-      <HintPath>..\FarlandsCoreMod\bin\Debug\netstandard2.1\FarlandsCoreMod.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\Program Files (x86)\Steam\steamapps\common\Farlands\Farlands_Data\Managed\Newtonsoft.Json.dll</HintPath>

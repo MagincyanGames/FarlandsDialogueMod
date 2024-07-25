@@ -72,7 +72,6 @@ namespace FarlandsDialogueMod.Patchers
             public int ID = -1;
             public string nodeColor;
             
-
             /*
             entryGroups
             fields
@@ -250,7 +249,7 @@ namespace FarlandsDialogueMod.Patchers
 
                 return res;
             }
-            public void From(PixelCrushers.DialogueSystem.Conversation data)
+            public void LoadFrom(PixelCrushers.DialogueSystem.Conversation data)
             {
                 Title = data.Title;
                 ID = data.id;
@@ -262,7 +261,17 @@ namespace FarlandsDialogueMod.Patchers
                     if (i < Entries.Count) Entries[i].ModifyFrom(data.dialogueEntries[i]);
                     else Entries.Add(EntryJson.From(data.dialogueEntries[i]));
                 }
-                    
+            }
+
+            public static TermJSON From(PixelCrushers.DialogueSystem.Conversation data)
+            {
+                var res = new TermJSON
+                {
+                    Entries = new()
+                };
+
+                res.LoadFrom(data);
+                return res;
             }
 
             public Conversation ToConversation()
@@ -354,7 +363,12 @@ namespace FarlandsDialogueMod.Patchers
         public static void FromDialogue(DialogueDatabase database, SourceJSON res)
         {
             foreach (var conversation in CreateCache(database.conversations))
-                res.create.Dialogues.Conversations[conversation.Key].From(conversation.Value);
+            {
+                if (res.create.Dialogues.Conversations.ContainsKey(conversation.Key))
+                    res.create.Dialogues.Conversations[conversation.Key].LoadFrom(conversation.Value);
+                else
+                    res.create.Dialogues.Conversations.Add(conversation.Key, TermJSON.From(conversation.Value));
+            }
         }
         public static SourceJSON FromFull(LanguageSourceData source, DialogueDatabase database)
         {
@@ -439,9 +453,12 @@ namespace FarlandsDialogueMod.Patchers
                     foreach (var pair in translations.Inventory)
                     {
                         var translation = pair.Value;
+                        if(translation.name != null)
                         AddContainingTerm($"Inventory/item_name_{pair.Key}",
                             translation.name, data);
-                        AddContainingTerm($"Inventory/item_description_{pair.Key}",
+
+                        if (translation.description != null)
+                            AddContainingTerm($"Inventory/item_description_{pair.Key}",
                             translation.description, data);
                     }
 

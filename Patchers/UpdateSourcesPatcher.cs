@@ -29,23 +29,29 @@ namespace FarlandsDialogueMod.Patchers
             sources = src.Select(SourceJSON.FromFile).ToList();
         }
 
-        [HarmonyPatch(typeof(LocalizationManager), "RegisterSceneSources")]
-        [HarmonyPostfix]
-        public static void SourcePatch()
+        public static void export()
         {
-            if (isSourcesLoaded) return;
-            isSourcesLoaded = true;
-
             if (DialogueModPlugin.Config_exportDialogues.Value)
             {
-                var source = new SourceJSON();
-                SourceJSON.FromSource(LocalizationManager.Sources.First(), source);
+                var source = SourceJSON.FromFull(LocalizationManager.Sources.First(), DialogueManager.instance.masterDatabase);
 
                 File.WriteAllText(
                     Path.Combine(Paths.PluginPath, "FarlandsDialogueMod/export.json"),
                     Newtonsoft.Json.JsonConvert.SerializeObject(source)
                 );
             }
+        }
+
+        [HarmonyPatch(typeof(LocalizationManager), "RegisterSceneSources")]
+        [HarmonyPostfix]
+        public static void SourcePatch()
+        {
+            if (isSourcesLoaded) return;
+            if (isDialoguesLoaded) export();
+
+            isSourcesLoaded = true;
+
+            
 
             if(sources == null)
                 InitSources();
@@ -65,6 +71,11 @@ namespace FarlandsDialogueMod.Patchers
         [HarmonyPostfix]
         public static void DialoguePatch()
         {
+            if (isDialoguesLoaded) return;
+            if (isSourcesLoaded) export();
+
+            isDialoguesLoaded = true;
+
             if (sources == null)
                 InitSources();
 
