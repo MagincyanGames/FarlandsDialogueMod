@@ -148,7 +148,77 @@
             "1": {
                 "name":"Axa",
                 "description": "Un axa bieha, caçi a perdío tó er filo, aunque aun puede cortâh argunô árbolê no mu durô."
+            },
+            "10": {
+                "name": "Piedra",
+                "description": "No êh muxo, pero çi hunto çufiçientê podré côttruîh y fabricâh coçâ mâh intereçantê."
+            },
+            "100": {
+                "name": "Rânnato",
+                "description": "Êh mu colorida, lo que me açe pençâh que debe çêh mu benenoça. Prefiero no pençâh eço."
+            },
+            "101": {
+                "name": "Môcca de néttâ",
+                "description": "Cambian de colôh çegún er tipo de flôh de dónde êttraigan er néttâ."
+
+            },
+            "102": {
+                "name": "Araña colorida",
+                "description": "Es como una hormiga normal, pero con un color más picante y sabroso, en algunos planetas se las comen."
+            },
+            "103": {
+                "name": "Çiempiêh taladro",
+                "description": "Çe dêpplaça baho tierra utiliçando çu cabeça con forma de taladro, açomarçe fue un errôh."
+            },
+            "104": {
+                "name": "Tricaçio",
+                "description": "En mi planeta a êttô lô yamamô \"guçanô\"."
+            },
+            "105": {
+                "name": "Çarta-lunâ",
+                "description": "Confunde a çû depredadorê utiliçando er cuênno pa andâh en lugâh de lâ patâ."
+            },
+            "106": {
+                "name": "Cubeliyo",
+                "description": "Êtte inçêtto êh el reçurtao de un êpperimento de fuçión entre inçêttô y dronê que no çalió der tó bien."
+            },
+            "107": {
+                "name": "Maripoça Ánhê",
+                "description": "Êh er hefe finâh der mundo de lô inçêttô."
+            },
+            "108" : {
+                "name": "Bâtteria",
+                "description": "Êttá bibo, ¿berdá?"
+            },
+            "109":{
+                "name": "Fourdû",
+                "description": "Êtte inçêtto tiene un caparaçón mu duro y êttá preparao pa lô climâ mâh áríô, aunque mi ré funçionó iguâh."
+            },
+            "11": {
+                "name": "Heoda",
+                "description": "Êh mu dura por fuera y quiçâh êcconda argo intereçante en çu interiôh, debería yebâl-la a un errero."
+            },
+            "110": {
+                "name": "Slugra",
+                "description": "Çe enroyan çobre çí mîmmô creando una dona perfêtta."
+            },
+            "111": {
+                "name": "Niroide",
+                "description": "Lebantan lô braçô pa pareçêh mâh grande, aunque a beçê pareçe que bailen."
+            },
+            "112": {
+                "name": "Borgolia",
+                "description": "Mueben çû alâ pa emitîh er çonío... de alâ en mobimiento."
+            },
+            "113": {
+                "name": "Abîppa Banadia",
+                "description": "No aportan ná gueno a la naturaleça, pero ar menô êttán en un planeta donde no molêttan a nadie."
+            },
+            "114": {
+                "name": "Môcca frondoça",
+                "description": "Tiene una gruesa capa de pelo para protegerse de las bajas temperaturas."
             }
+
         },
         "Dialogues": {
             "Conversations": {
